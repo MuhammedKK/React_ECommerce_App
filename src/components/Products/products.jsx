@@ -21,7 +21,7 @@ import useStyles from './styles';
     
 // ];
 
-const Products = ({products}) => {
+const Products = ({products, onAddToCart}) => {
 
     const classes = useStyles();
 
@@ -31,7 +31,7 @@ const Products = ({products}) => {
             <Grid container justifyContent="center" spacing={4}>
                 {products.map(pro => (
                     <Grid item key={pro.id} xs={12} sm={6} md={4} lg={3}>
-                        <Product key={pro.id} product={pro} />
+                        <Product key={pro.id} product={pro} onAddToCart={onAddToCart} />
                     </Grid>
                 ))}
             </Grid>
